@@ -5,6 +5,8 @@ sudo: false
 php:
   - 7.1
   - 7.2
+  - 7.3
+  - 7.4
 
 cache:
   directories:
@@ -17,7 +19,7 @@ addons:
       - language-pack-es
       - language-pack-fr
 
-script: 
+script:
   - composer install --prefer-dist --no-interaction --optimize-autoloader
   - vendor/bin/phpunit --configuration phpunit.xml
 
